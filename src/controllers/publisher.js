@@ -7,7 +7,7 @@ const publisherController = (req, res) => {
   
     const data = {
         topic: req.params.topic,
-        msg: req.body.message 
+        msg: req.body.msg 
     };
 
     publisher.hgetall(data.topic, (err, subs) => {
@@ -28,7 +28,7 @@ const publisherController = (req, res) => {
     
     return res.status(201).json({ 
         success: true, 
-        message: "topic published successfully"
+        message: "published successfully"
     });
     
 }
