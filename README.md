@@ -44,7 +44,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "msg": "Helle World"
+    "msg": "Hello World"
 }
 ```
 
