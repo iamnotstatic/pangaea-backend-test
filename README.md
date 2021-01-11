@@ -84,7 +84,7 @@ Content-Type: application/json
 **Successful Response:**
 
 ```json
-HTTP/1.1 200 OK
+HTTP/1.1 201 Created
 Server: RESTful API
 Content-Type: application/json
 
