@@ -17,10 +17,7 @@ const subscribeToTopic = (req, res, next) => {
 			let data = JSON.parse(subs.url);
 			data.push(req.body.url);
 
-			client.hmset(
-				req.params.topic,
-				['url', JSON.stringify(data)],
-				(err, res) => {
+			client.hmset(req.params.topic, ['url', JSON.stringify(data)], (err, res) => {
 					if (err) {
 						console.log(err);
 					}
