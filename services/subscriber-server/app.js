@@ -1,5 +1,5 @@
 const express = require('express');
-const subscriberRoute = require('./routes/subscriber');
+const subscriberRoute = require('./src/route');
 
 const PORT = process.env.PORT || 3001;
 

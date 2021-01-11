@@ -11,13 +11,12 @@ const publisherController = (req, res) => {
     };
 
     publisher.hgetall(data.topic, (err, subs) => {
-    
         if (subs) {
             const subscribers = JSON.parse(subs.url);
             (async () => {
                 for (const subscriber of subscribers) {
                     try {
-                        await axios.post(subscriber, { data: data });
+                       await axios.post(subscriber, { data: data });
                     } catch (error) {
                         console.log(error);
                     } 

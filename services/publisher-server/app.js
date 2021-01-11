@@ -1,5 +1,5 @@
 const express = require('express');
-const publisherRoute = require('./routes/publisher');
+const publisherRoute = require('./src/route');
 
 const PORT = process.env.PORT || 3000;
 

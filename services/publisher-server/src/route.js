@@ -1,5 +1,5 @@
 const express = require('express');
-const { publisherController } = require('../controllers/publisher');
+const { publisherController } = require('./controller');
 
 const publisher = express.Router()
 
