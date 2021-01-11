@@ -1,7 +1,7 @@
 const express = require('express');
 const publisherRoute = require('./src/route');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 
@@ -14,3 +14,5 @@ app.use('/', publisherRoute);
 app.listen(PORT,() => {
     console.log(`server is listening on PORT ${PORT}`);
 })
+
+module.exports = app;

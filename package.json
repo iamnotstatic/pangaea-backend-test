@@ -1,0 +1,22 @@
+{
+  "name": "pangaea-backend-test",
+  "version": "1.0.0",
+  "description": "This API uses `POST` request to communicate and HTTP [response codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) to indenticate status and errors. All responses come in standard JSON. All requests must be valid JSON.",
+  "main": "start.js",
+  "scripts": {
+    "start:subscriber": " cd ./services/subscriber-server && npm start",
+    "start:publisher": "cd ./services/publisher-server && npm start",
+    "start": "concurrently \"npm run start:publisher\" \"npm run start:subscriber\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamnotstatic/pangaea-backend-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamnotstatic/pangaea-backend-test/issues"
+  },
+  "homepage": "https://github.com/iamnotstatic/pangaea-backend-test#readme"
+}
