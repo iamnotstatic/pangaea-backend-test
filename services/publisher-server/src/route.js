@@ -1,9 +1,10 @@
 const express = require('express');
-const { publisherController } = require('./controller');
+const { publishTopic, subscribeToTopic } = require('./controller');
 
-const publisher = express.Router()
+const publisher = express.Router();
 
-publisher.post('/publish/:topic', publisherController);
+publisher.post('/publish/:topic', publishTopic);
 
+publisher.post('/subscribe/:topic', subscribeToTopic);
 
 module.exports = publisher;

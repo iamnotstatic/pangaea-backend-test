@@ -2,9 +2,7 @@ const redis = require('redis');
 const subscriber = redis.createClient();
 
 const subscriberController = (req, res) => {
-
     subscriber.hgetall(req.params.topic, (err, subs) => {
-    
         if (!subs) {
             const arr = [req.body.url];
 

@@ -14,3 +14,5 @@ app.use('/', subscriberRoute);
 app.listen(PORT,() => {
     console.log(`server is listening on PORT ${PORT}`);
 })
+
+module.exports = app;
