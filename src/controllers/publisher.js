@@ -1,4 +1,5 @@
 const redis = require('redis');
+const axios = require('axios');
 const publisher = redis.createClient();
 
 
@@ -9,7 +10,21 @@ const publisherController = (req, res) => {
         msg: req.body.message 
     };
 
-    publisher.publish(req.params.topic, JSON.stringify(data));
+    publisher.hgetall(data.topic, (err, subs) => {
+    
+        if (subs) {
+            const subscribers = JSON.parse(subs.url);
+            (async () => {
+                for (const subscriber of subscribers) {
+                    try {
+                        await axios.post(subscriber, { data: data });
+                    } catch (error) {
+                        console.log(error);
+                    } 
+                }
+            })();
+        }
+    });
     
     return res.status(201).json({ 
         success: true, 
