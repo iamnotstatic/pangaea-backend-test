@@ -63,7 +63,7 @@ Content-Type: application/json
 ```
 
 
-## Subscriber to a topic
+## Subscribe to a topic
 
 **You send:** Topic and endpoint(url).
 
