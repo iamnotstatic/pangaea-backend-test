@@ -6,7 +6,9 @@ This API uses `POST` request to communicate and HTTP [response codes](https://en
 ## Packages Used
 
 Redis https://www.npmjs.com/package/redis
+
 Express https://www.npmjs.com/package/express
+
 Axios https://www.npmjs.com/package/axios
 
 
@@ -31,6 +33,7 @@ node src/publisherServer.js - Start the publisher server
 ## Publish a topic
 
 **You send:** Message and topic name.
+
 **You get:** Success and message.
 
 **Request:**
@@ -63,7 +66,8 @@ Content-Type: application/json
 ## Subscriber to a topic
 
 **You send:** Topic and endpoint(url).
-**You get:** Url and topic 
+
+**You get:** Url and topic.
 
 **Request:**
 
