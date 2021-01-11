@@ -14,83 +14,30 @@ Axios https://www.npmjs.com/package/axios
 
 ## How to run the program
 
+### Start the Publisher server
 ```
-npm install
-
-node src/subscriberServer.js - Start the subscriber server
-
-node src/publisherServer.js - Start the publisher server
+cd services/publisher-server
+node app.js - Start the server
 ```
 
-### Response Codes
 
+### Start the Subscriber server
 ```
-200: Success
-201: Created
+cd services/susbriber-server
+node app.js - Start the server
 ```
 
 
 ## Publish a topic
-
-**You send:** Message and topic name.
-
-**You get:** Success and message.
-
-**Request:**
-
-```json
-POST /publish/{topic} HTTP/1.1
-Accept: application/json
-Content-Type: application/json
-
-{
-    "msg": "Hello World"
-}
-```
-
-**Successful Response:**
-
-```json
-HTTP/1.1 201 Created
-Server: RESTful API
-Content-Type: application/json
-
-{
-    "success": true,
-    "message": "published successfully"
-}
-
+Run the below command on your terminal
+```terminal
+curl -X POST -H "Content-Type: application/json" -d '{"message": "hello"}' http://localhost:3000/publish/topic1
 ```
 
 
 ## Subscribe to a topic
-
-**You send:** Topic and endpoint(url).
-
-**You get:** Url and topic.
-
-**Request:**
-
-```json
-POST /subscribe/{topic} HTTP/1.1
-Accept: application/json
-Content-Type: application/json
-
-{
-    "url": "http://mysubscriber.test"
-}
-```
-
-**Successful Response:**
-
-```json
-HTTP/1.1 201 Created
-Server: RESTful API
-Content-Type: application/json
-
-{
-    "url": "http://mysubscriber.test",
-    "topic": "topic1"
-}
+Run the below command on your terminal
+```terminal
+curl -X POST -H "Content-Type: application/json" -d '{ "url": "http://localhost:3001/test2"}' http://localhost:3000/subscribe/topic1
 ```
 
