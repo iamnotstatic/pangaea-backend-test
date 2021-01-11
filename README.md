@@ -52,7 +52,7 @@ Content-Type: application/json
 
 ```json
 HTTP/1.1 201 Created
-Server: My RESTful API
+Server: RESTful API
 Content-Type: application/json
 
 {
@@ -72,12 +72,12 @@ Content-Type: application/json
 **Request:**
 
 ```json
-POST /subscribe/{topice} HTTP/1.1
+POST /subscribe/{topic} HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
 {
-    "url": "https://jsonplaceholder.typicode.com/todos"
+    "url": "http://mysubscriber.test"
 }
 ```
 
@@ -85,11 +85,11 @@ Content-Type: application/json
 
 ```json
 HTTP/1.1 200 OK
-Server: My RESTful API
+Server: RESTful API
 Content-Type: application/json
 
 {
-    "url": "https://jsonplaceholder.typicode.com/todos",
+    "url": "http://mysubscriber.test",
     "topic": "topic1"
 }
 ```
