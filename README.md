@@ -12,19 +12,17 @@ Express https://www.npmjs.com/package/express
 Axios https://www.npmjs.com/package/axios
 
 
-## How to run the program
+## How to run the servers
 
-### Start the Publisher server
+### Windows
 ```
-cd services/publisher-server
-node app.js - Start the server
+./start-server.sh 
 ```
 
 
-### Start the Subscriber server
+### Mac OS
 ```
-cd services/susbriber-server
-node app.js - Start the server
+sh start-server.sh
 ```
 
 
