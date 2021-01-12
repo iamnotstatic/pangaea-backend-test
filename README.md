@@ -12,32 +12,30 @@ Express https://www.npmjs.com/package/express
 Axios https://www.npmjs.com/package/axios
 
 
-## How to run the program
+## How to run the servers
 
-### Start the Publisher server
+### Windows
 ```
-cd services/publisher-server
-node app.js - Start the server
+./start-server.sh 
 ```
 
 
-### Start the Subscriber server
+### Mac OS
 ```
-cd services/susbriber-server
-node app.js - Start the server
+sh start-server.sh
 ```
 
 
 ## Publish a topic
 Run the below command on your terminal
 ```terminal
-curl -X POST -H "Content-Type: application/json" -d '{"message": "hello"}' http://localhost:3000/publish/topic1
+curl -X POST -H "Content-Type: application/json" -d '{"message": "hello"}' http://localhost:8000/publish/topic1
 ```
 
 
 ## Subscribe to a topic
 Run the below command on your terminal
 ```terminal
-curl -X POST -H "Content-Type: application/json" -d '{ "url": "http://localhost:3001/test2"}' http://localhost:3000/subscribe/topic1
+curl -X POST -H "Content-Type: application/json" -d '{ "url": "http://localhost:9000/test2"}' http://localhost:8000/subscribe/topic1
 ```
 
