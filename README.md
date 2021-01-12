@@ -14,7 +14,7 @@ Axios https://www.npmjs.com/package/axios
 
 ## How to run the servers
 
-### Windows
+### Windows OS
 ```
 ./start-server.sh 
 ```
@@ -36,6 +36,6 @@ curl -X POST -H "Content-Type: application/json" -d '{"message": "hello"}' http:
 ## Subscribe to a topic
 Run the below command on your terminal
 ```terminal
-curl -X POST -H "Content-Type: application/json" -d '{ "url": "http://localhost:9000/test2"}' http://localhost:8000/subscribe/topic1
+curl -X POST -H "Content-Type: application/json" -d '{ "url": "http://localhost:9000/test1"}' http://localhost:8000/subscribe/topic1
 ```
 
